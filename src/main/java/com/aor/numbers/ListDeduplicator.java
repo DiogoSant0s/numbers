@@ -9,11 +9,7 @@ import java.util.List;
  */
 public class ListDeduplicator implements GenericListDeduplicator {
     private final GenericListSorter sorter;
-
-    public ListDeduplicator(GenericListSorter sorter) {
-        this.sorter = sorter;
-    }
-
+    public ListDeduplicator(GenericListSorter sorter) {this.sorter = sorter;}
     public List<Integer> deduplicate(List<Integer> list) {
         List<Integer> sorted = sorter.sort(list);
         List<Integer> unique = new ArrayList<>();
